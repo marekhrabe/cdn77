@@ -1,0 +1,15 @@
+{
+  "name": "cdn77",
+  "version": "1.0.0",
+  "description": "URL signer for using secure urls on CDN77",
+  "author": "Marek Hrabe <marekhrabe@abdoc.net> (http://github.com/marekhrabe)",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/marekhrabe/cdn77.git"
+  },
+  "bugs": {
+    "url": "http://github.com/marekhrabe/cdn77/issues"
+  },
+  "license": "MIT"
+}
