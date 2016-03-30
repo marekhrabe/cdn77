@@ -1,6 +1,6 @@
 {
   "name": "cdn77",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "URL signer for using secure urls on CDN77",
   "author": "Marek Hrabe <marekhrabe@abdoc.net> (http://github.com/marekhrabe)",
   "main": "main.js",
