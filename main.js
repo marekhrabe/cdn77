@@ -1,6 +1,6 @@
 var crypto = require('crypto')
 
-module.exports = function (cdnDomain, secretKey) {
+module.exports = function (cdnDomain, secretKey, secure) {
   return function (filePath, expiryTimestamp) {
     if (!filePath) throw new Error('No filePath defined')
 
@@ -18,6 +18,6 @@ module.exports = function (cdnDomain, secretKey) {
     var md5 = crypto.createHash('md5').update(hashStr)
     var resultHash = md5.digest('base64').replace(/\+/g, '-').replace(/\//g, '_')
 
-    return 'http://' + cdnDomain + filePath + '?secure=' + resultHash + ',' + expiryTimestamp || ''
+    return (secure === true ? 'https' : 'http') + '://' + cdnDomain + filePath + '?secure=' + resultHash + ',' + expiryTimestamp || ''
   }
 }

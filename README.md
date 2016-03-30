@@ -11,10 +11,21 @@ npm install cdn77
 ## Usage
 
 ```javascript
+cdn77(domain, secret, secure)
+```
+
+Domain: Your CDN Domain
+Secret: Your Secret Key
+Secure: Optional. If `true`, https will be used, otherwise http.
+
+## Example
+
+```javascript
 var cdn77 = require('cdn77')
 
 // replace with your resource url and your secret token
-var exampleSigner = cdn77('www.example.com', 'ykX1QNTRvp3tfSn8')
+// third parameter (true) tells library to generate https url
+var exampleSigner = cdn77('www.example.com', 'ykX1QNTRvp3tfSn8', true)
 
 // generate link for /images/photo.png that expires in 5 minutes
 // NOTE: we need to convert javascript timestamp from miliseconds to seconds
